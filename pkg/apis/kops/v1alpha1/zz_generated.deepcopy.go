@@ -2463,6 +2463,16 @@ func (in *LeaderElectionConfiguration) DeepCopyInto(out *LeaderElectionConfigura
 		*out = new(bool)
 		**out = **in
 	}
+	if in.LeaderElectLeaseDuration != nil {
+		in, out := &in.LeaderElectLeaseDuration, &out.LeaderElectLeaseDuration
+		*out = new(v1.Duration)
+		**out = **in
+	}
+	if in.LeaderElectRenewDeadlineDuration != nil {
+		in, out := &in.LeaderElectRenewDeadlineDuration, &out.LeaderElectRenewDeadlineDuration
+		*out = new(v1.Duration)
+		**out = **in
+	}
 	return
 }
 
